@@ -1,0 +1,14 @@
+#cloud-config
+users:
+  - name: username
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa _PUBLIC_KEY_
+  - name: deploymaster
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+    - ssh-rsa _PUBLIC_KEY_
